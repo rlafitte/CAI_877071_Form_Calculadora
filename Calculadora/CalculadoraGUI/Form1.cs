@@ -22,7 +22,7 @@ namespace CalculadoraGUI
             try
             {
                 Validar();
-            double d = Convert.ToInt32(txtValor1.Text) + Convert.ToInt32(txtValor2.Text);
+            double d = Convert.ToDouble(txtValor1.Text) + Convert.ToDouble(txtValor2.Text);
             lblResult.Text = d.ToString();
                 Limpiar();
             }catch (Exception ex)
@@ -50,6 +50,59 @@ namespace CalculadoraGUI
             if (txtValor2.Text == string.Empty)
             {
                 throw new Exception("Valor 2 vacío");
+            }
+        }
+
+        private void btnDiv_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Validar();
+                ValidarDiv();
+                double d = Convert.ToDouble(txtValor1.Text) / Convert.ToDouble(txtValor2.Text);
+                lblResult.Text = d.ToString();
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void ValidarDiv()
+        {
+            if (txtValor2.Text == "0")
+            {
+                throw new Exception("No se puede dividir por cero");
+            }
+        }
+
+        private void btnMenos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Validar();
+                double d = Convert.ToDouble(txtValor1.Text) - Convert.ToDouble(txtValor2.Text);
+                lblResult.Text = d.ToString();
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnMulti_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Validar();
+                double d = Convert.ToDouble(txtValor1.Text) * Convert.ToDouble(txtValor2.Text);
+                lblResult.Text = d.ToString();
+                Limpiar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

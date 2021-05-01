@@ -108,6 +108,7 @@ namespace CalculadoraGUI
             this.btnMenos.TabIndex = 7;
             this.btnMenos.Text = "-";
             this.btnMenos.UseVisualStyleBackColor = true;
+            this.btnMenos.Click += new System.EventHandler(this.btnMenos_Click);
             // 
             // btnDiv
             // 
@@ -117,6 +118,7 @@ namespace CalculadoraGUI
             this.btnDiv.TabIndex = 8;
             this.btnDiv.Text = "/";
             this.btnDiv.UseVisualStyleBackColor = true;
+            this.btnDiv.Click += new System.EventHandler(this.btnDiv_Click);
             // 
             // btnMulti
             // 
@@ -126,6 +128,7 @@ namespace CalculadoraGUI
             this.btnMulti.TabIndex = 9;
             this.btnMulti.Text = "*";
             this.btnMulti.UseVisualStyleBackColor = true;
+            this.btnMulti.Click += new System.EventHandler(this.btnMulti_Click);
             // 
             // Form1
             // 
